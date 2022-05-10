@@ -1,0 +1,20 @@
+/**
+ * VHS is a child class of Movie and incorporates new methods along with the provided
+ * ones from Movie.
+ * 
+ * @author Tim Fierek
+ *
+ */
+public class VHS extends Movie{
+
+	private int currentTime;
+	
+	@Override
+	public void play() {
+		System.out.println("Scene " + currentTime + ": " + scenes.get(currentTime));
+	}
+	
+	public void rewind() {
+		currentTime = 0;
+	}
+}

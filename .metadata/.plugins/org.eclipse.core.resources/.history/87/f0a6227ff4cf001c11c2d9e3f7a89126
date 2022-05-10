@@ -1,0 +1,33 @@
+import java.util.ArrayList;
+
+/**
+ * Movie is an abstract class to model certain movie rentals based on
+ * in children classes.
+ * 
+ * @author Tim Fierek
+ *
+ */
+public abstract class Movie {
+	private String title;
+	private int runTime;
+	private ArrayList<String> scenes;
+	
+	/**
+	 * Basic instance output method that prints title and runTime
+	 */
+	public void printInfo() {
+		System.out.println("Title: " + title + " Runtime: " + runTime + "min(s)");
+	}
+	
+	/**
+	 * Prints each scene along with index from scenes ArrayList
+	 */
+	public void printScenes() {
+		for(int i = 0; i < scenes.size(); i++) {
+			System.out.print("Scene: " + i + ": " + scenes.get(i));
+		}
+	}
+	
+	public abstract void play();
+
+}

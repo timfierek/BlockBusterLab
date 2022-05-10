@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+C:\Users\Tim\Desktop\AmazonJavaBootcamp\4.3-AbstractClasses\.metadata\.plugins\org.eclipse.jdt.core
+2147413924.index
+760091825.index
+1865797976.index

@@ -1,0 +1,10 @@
+/**
+ * Movie is an abstract class to model certain movie rentals based on
+ * in children classes.
+ * 
+ * @author Tim Fierek
+ *
+ */
+public abstract class Movie {
+
+}

@@ -1,0 +1,10 @@
+/**
+ * VHS is a child class of Movie and incorporates new methods along with the provided
+ * ones from Movie.
+ * 
+ * @author Tim Fierek
+ *
+ */
+public class VHS extends Movie{
+
+}

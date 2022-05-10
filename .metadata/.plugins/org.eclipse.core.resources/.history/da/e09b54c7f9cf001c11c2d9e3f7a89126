@@ -1,0 +1,17 @@
+/**
+ * DVD provides extended functionality from its Movie super class.
+ * 
+ * @author Tim Fierek
+ *
+ */
+public class DVD extends Movie{
+
+	@Override
+	public void play() {
+		printScenes();
+		System.out.println("Which scene of the DVD " + title);
+		System.out.print("Would you like to watch? Select 0 to " + (runTime - 1) + ": ");
+		
+	}
+	
+}

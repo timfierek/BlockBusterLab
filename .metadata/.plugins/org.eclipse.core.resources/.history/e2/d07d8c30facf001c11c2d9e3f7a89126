@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+/**
+ * DVD provides extended functionality from its Movie super class.
+ * 
+ * @author Tim Fierek
+ *
+ */
+public class DVD extends Movie{
+
+	private static Scanner scnr = new Scanner(System.in);
+	
+	@Override
+	public void play() {
+		System.out.println("Which scene of the DVD " + title);
+		System.out.print("Would you like to watch? Select 0 to " + (runTime - 1) + ": ");
+		
+		int scene = scnr.nextInt();
+	}
+	
+}
