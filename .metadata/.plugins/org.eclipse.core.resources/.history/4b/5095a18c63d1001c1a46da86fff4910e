@@ -1,0 +1,30 @@
+import static org.junit.jupiter.api.Assertions.*;
+
+import java.util.ArrayList;
+
+import org.junit.jupiter.api.Test;
+
+class VHSTest {
+
+	@Test
+	void testConstructor1() {
+		ArrayList<String> scenes = new ArrayList<>();
+		VHS test = new VHS("test movie", 4, scenes);
+		assertEquals("test movie", test.getTitle());
+	}
+	
+	@Test
+	void testConstructor2() {
+		ArrayList<String> scenes = new ArrayList<>();
+		VHS test = new VHS("test movie", 4, scenes);
+		assertEquals("4", test.getRunTime());
+	}
+	
+	@Test
+	void testConstructor3() {
+		ArrayList<String> scenes = new ArrayList<>();
+		VHS test = new VHS("test movie", 4, scenes);
+		assertNotNull(test.getScenes());
+	}
+
+}

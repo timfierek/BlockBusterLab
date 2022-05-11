@@ -1,0 +1,68 @@
+import static org.junit.jupiter.api.Assertions.*;
+
+import java.util.ArrayList;
+
+import org.junit.jupiter.api.Test;
+
+class VHSTest {
+
+	@Test
+	void testConstructor1() {
+		ArrayList<String> scenes = new ArrayList<>();
+		VHS test = new VHS("test movie", 4, scenes);
+		assertEquals("test movie", test.getTitle());
+	}
+	
+	@Test
+	void testConstructor2() {
+		ArrayList<String> scenes = new ArrayList<>();
+		VHS test = new VHS("test movie", 4, scenes);
+		assertEquals("4", test.getRunTime());
+	}
+	
+	@Test
+	void testConstructor3() {
+		ArrayList<String> scenes = new ArrayList<>();
+		VHS test = new VHS("test movie", 4, scenes);
+		assertNotNull(test.getScenes());
+	}
+	
+	@Test
+	void testConstructor4() {
+		ArrayList<String> scenes = new ArrayList<>();
+		VHS test = new VHS("test movie", 4, scenes);
+		assertEquals(0, test.getCurrentTime());
+	}
+	
+	@Test
+	void testPlay() {
+		ArrayList<String> scenes = new ArrayList<>();
+		VHS test = new VHS("test movie", 4, scenes);
+		test.play();
+		assertEquals(1, test.getCurrentTime());
+	}
+	
+	@Test
+	void testRewind() {
+		ArrayList<String> scenes = new ArrayList<>();
+		VHS test = new VHS("test movie", 4, scenes);
+		test.play();
+		test.play();
+		test.rewind();
+		assertEquals(0, test.getCurrentTime());
+	}
+	
+	@Test
+	void testAutoRewind() {
+		ArrayList<String> scenes = new ArrayList<>();
+		VHS test = new VHS("test movie", 4, scenes);
+		test.play();
+		test.play();
+		test.play();
+		test.play();
+		assertEquals(0, test.getCurrentTime());
+	}
+	
+	
+
+}

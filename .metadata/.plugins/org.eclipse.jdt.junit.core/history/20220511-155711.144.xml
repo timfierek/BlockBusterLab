@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="VHSTest" project="BlockbusterLab" tests="7" started="7" failures="0" errors="0" ignored="0">
+  <testsuite name="VHSTest" time="0.019" uniqueid="[engine:junit-jupiter]/[class:VHSTest]">
+    <testcase name="testPlay" classname="VHSTest" time="0.014" displayname="testPlay()" uniqueid="[engine:junit-jupiter]/[class:VHSTest]/[method:testPlay()]"/>
+    <testcase name="testAutoRewind" classname="VHSTest" time="0.0" displayname="testAutoRewind()" uniqueid="[engine:junit-jupiter]/[class:VHSTest]/[method:testAutoRewind()]"/>
+    <testcase name="testConstructor1" classname="VHSTest" time="0.002" displayname="testConstructor1()" uniqueid="[engine:junit-jupiter]/[class:VHSTest]/[method:testConstructor1()]"/>
+    <testcase name="testConstructor2" classname="VHSTest" time="0.0" displayname="testConstructor2()" uniqueid="[engine:junit-jupiter]/[class:VHSTest]/[method:testConstructor2()]"/>
+    <testcase name="testConstructor3" classname="VHSTest" time="0.0" displayname="testConstructor3()" uniqueid="[engine:junit-jupiter]/[class:VHSTest]/[method:testConstructor3()]"/>
+    <testcase name="testConstructor4" classname="VHSTest" time="0.001" displayname="testConstructor4()" uniqueid="[engine:junit-jupiter]/[class:VHSTest]/[method:testConstructor4()]"/>
+    <testcase name="testRewind" classname="VHSTest" time="0.0" displayname="testRewind()" uniqueid="[engine:junit-jupiter]/[class:VHSTest]/[method:testRewind()]"/>
+  </testsuite>
+</testrun>
