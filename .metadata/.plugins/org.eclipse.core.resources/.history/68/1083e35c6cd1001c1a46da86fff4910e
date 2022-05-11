@@ -53,8 +53,7 @@ public class Blockbuster {
 		}
 		
 		System.out.println(movies.get(movieSelection - 1).getTitle());
-		System.out.println("Runtime: " + movies.get(movieSelection - 1).getRunTime() + " minutes");
-		System.out.println("\nDo you want to watch the movie? Y/N: ");
+		System.out.println("Runtime: " + movies.get(movieSelection - 1).getRunTime());
 
 		
 	}
@@ -62,7 +61,7 @@ public class Blockbuster {
 	private static void printList(ArrayList<Movie> movies) {
 		System.out.println("Please Select a Movie from the list:");
 		for (int i = 0; i < movies.size(); i++) {
-			System.out.println("   " + (i + 1) + ") " + movies.get(i).getTitle());
+			System.out.println("   " + (i + 1) + ") " + movies.get(i));
 		}
 		System.out.print("Please select a movie you want to watch: ");
 	}
