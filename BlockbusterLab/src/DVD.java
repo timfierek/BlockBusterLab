@@ -22,19 +22,19 @@ public class DVD extends Movie{
 		int scene = -1;
 		
 		do {
-			System.out.println("Which scene of the DVD " + getTitle());
-			System.out.print("Would you like to watch? Select 0 to " + (getRunTime() - 1) + ": ");
+			System.out.println("\nWhich scene of the DVD " + getTitle());
+			System.out.print("Would you like to watch? Select 0 to " + (getScenes().size() - 1) + ": ");
 			try {
 				scene = scnr.nextInt();
-				scnr.next(); 
 			}catch(Exception e) {
+				scnr.next(); 
 				System.out.println("Invalid input recieved, try again:");
 			}
 			
 			
 		}while(scene == -1);
 		
-		System.out.println("Scene " + scene + ": " + getScenes().get(scene));
+		System.out.println("\nScene " + scene + ": " + getScenes().get(scene));
 	}
 	
 }

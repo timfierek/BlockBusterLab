@@ -18,11 +18,13 @@ public class VHS extends Movie{
 	
 	@Override
 	public void play() {
-		System.out.println("Scene " + currentTime + ": " + getScenes().get(currentTime));
-		currentTime++;
-		if(currentTime > getRunTime()-1) {
+		if(currentTime > getScenes().size()-1) {
 			rewind();
 		}
+		System.out.println("VHS " + getTitle());
+		System.out.println("Scene " + currentTime + ": " + getScenes().get(currentTime));
+		currentTime++;
+		
 	}
 	
 	public void rewind() {

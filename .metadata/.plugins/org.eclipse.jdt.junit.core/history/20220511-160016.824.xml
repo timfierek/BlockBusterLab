@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="DVDTest" project="BlockbusterLab" tests="2" started="2" failures="0" errors="0" ignored="0">
-  <testsuite name="DVDTest" time="0.017" uniqueid="[engine:junit-jupiter]/[class:DVDTest]">
-    <testcase name="testConstructor1" classname="DVDTest" time="0.016" displayname="testConstructor1()" uniqueid="[engine:junit-jupiter]/[class:DVDTest]/[method:testConstructor1()]"/>
-    <testcase name="testConstructor2" classname="DVDTest" time="0.001" displayname="testConstructor2()" uniqueid="[engine:junit-jupiter]/[class:DVDTest]/[method:testConstructor2()]"/>
-  </testsuite>
-</testrun>

@@ -1,0 +1,70 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Scanner;
+
+/**
+ * Blockbuster contains the io functionality and main method of the app.
+ * 
+ * @author Tim Fierek
+ *
+ */
+public class Blockbuster {
+
+	public static void main(String[] args) {
+		Scanner scnr = new Scanner(System.in);
+		ArrayList<Movie> movies = new ArrayList<>();
+
+		ArrayList<String> babyDriverScenes = new ArrayList<String>(Arrays.asList("Baby is born", "Baby learns to drive",
+				"Baby gets car", "Baby arrested", "Baby goes to prison"));
+		movies.add(new DVD("Baby Driver", 5, babyDriverScenes));
+
+		ArrayList<String> starWarsScenes = new ArrayList<String>(
+				Arrays.asList("Lightsaber goes brrr", "Yoda's adventure", "Darth Vader is born", "Wookie"));
+		movies.add(new DVD("Star Wars", 4, starWarsScenes));
+
+		ArrayList<String> upScenes = new ArrayList<String>(
+				Arrays.asList("His wife dies", "balloon inflation", "Russ meets old man"));
+		movies.add(new DVD("Up", 3, upScenes));
+
+		ArrayList<String> fastAndFuriousScenes = new ArrayList<String>(
+				Arrays.asList("Bad guys shows up", "Big fight scene", "Aggressive driving", "More fighting"));
+		movies.add(new VHS("Fast and Furious 12", 4, fastAndFuriousScenes));
+
+		ArrayList<String> shrekScenes = new ArrayList<String>(
+				Arrays.asList("Shrek shows up", "Swamp dries out", "Shrek's wedding", "Epic quest"));
+		movies.add(new VHS("Shrek 5", 4, shrekScenes));
+
+		ArrayList<String> spaceJamScenes = new ArrayList<String>(Arrays.asList("Dribbling", "Aliens visit",
+				"More dribbling", "Exploring pluto", "Dribbling againg", "Porky dunks"));
+		movies.add(new VHS("Space Jam 3", 6, spaceJamScenes));
+
+		// io
+		System.out.println("Welcome to GC Blockbuster!");
+		int movieSelection = -1;
+		printList(movies);
+		
+		while (movieSelection == -1) {
+			try {
+				movieSelection = scnr.nextInt();
+			} catch (Exception e) {
+				scnr.next();
+				System.out.print("Invalid input, please enter a single integer: ");
+			}
+		}
+		
+		System.out.println(movies.get(movieSelection - 1).getTitle());
+		System.out.println("Runtime: " + movies.get(movieSelection - 1).getRunTime() + " minutes");
+		System.out.println("\nDo you want to watch the movie? Y/N: ");
+
+		
+	}
+
+	private static void printList(ArrayList<Movie> movies) {
+		System.out.println("Please Select a Movie from the list:");
+		for (int i = 0; i < movies.size(); i++) {
+			System.out.println("   " + (i + 1) + ") " + movies.get(i).getTitle());
+		}
+		System.out.print("Please select a movie you want to watch: ");
+	}
+
+}
