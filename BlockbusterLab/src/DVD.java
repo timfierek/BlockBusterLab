@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -7,23 +8,26 @@ import java.util.Scanner;
  * @author Tim Fierek
  *
  */
-public class DVD extends Movie{
+public class DVD implements Play{
 
 	private static Scanner scnr;
+	private String title;
+	private int runTime;
 	
-	public DVD(String title, int runTime, ArrayList<String> scenes) {
-		super(title, runTime, scenes);
+	public DVD(String title, int runTime) {
+		this.title = title;
+		this.runTime = runTime;
 		scnr = new Scanner(System.in);
 	}
 	
 	@Override
-	public void play() {
+	public void play(List<String> scenes) {
 		
 		int scene = -1;
 		
 		do {
-			System.out.println("\nWhich scene of the DVD " + getTitle());
-			System.out.print("Would you like to watch? Select 0 to " + (getScenes().size() - 1) + ": ");
+			System.out.println("\nWhich scene of the DVD " + title);
+			System.out.print("Would you like to watch? Select 0 to " + (scenes.size() - 1) + ": ");
 			try {
 				scene = scnr.nextInt();
 			}catch(Exception e) {
@@ -34,7 +38,7 @@ public class DVD extends Movie{
 			
 		}while(scene == -1);
 		
-		System.out.println("\nScene " + scene + ": " + getScenes().get(scene));
+		System.out.println("\nScene " + scene + ": " + scenes.get(scene));
 	}
 	
 }

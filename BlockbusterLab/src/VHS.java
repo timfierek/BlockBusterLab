@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * VHS is a child class of Movie and incorporates new methods along with the provided
@@ -7,22 +8,25 @@ import java.util.ArrayList;
  * @author Tim Fierek
  *
  */
-public class VHS extends Movie{
+public class VHS implements Play{
 
 	private int currentTime;
+	private String title;
+	private int runTime;
 	
-	public VHS(String title, int runTime, ArrayList<String> scenes) {
-		super(title, runTime, scenes);
+	public VHS(String title, int runTime) {
+		this.title = title;
+		this.runTime = runTime;
 		currentTime = 0;
 	}
 	
 	@Override
-	public void play() {
-		if(currentTime > getScenes().size()-1) {
+	public void play(List<String> scenes) {
+		if(currentTime > scenes.size()-1) {
 			rewind();
 		}
-		System.out.println("VHS " + getTitle());
-		System.out.println("Scene " + currentTime + ": " + getScenes().get(currentTime));
+		System.out.println("VHS " + title);
+		System.out.println("Scene " + currentTime + ": " + scenes.get(currentTime));
 		currentTime++;
 		
 	}
