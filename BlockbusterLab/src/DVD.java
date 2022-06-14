@@ -12,11 +12,9 @@ public class DVD implements Play{
 
 	private static Scanner scnr;
 	private String title;
-	private int runTime;
 	
-	public DVD(String title, int runTime) {
+	public DVD(String title) {
 		this.title = title;
-		this.runTime = runTime;
 		scnr = new Scanner(System.in);
 	}
 	

@@ -7,15 +7,17 @@ import java.util.ArrayList;
  * @author Tim Fierek
  *
  */
-public abstract class Movie {
+public class Movie {
 	private String title;
 	private int runTime;
 	private ArrayList<String> scenes;
+	private Play movieType;
 	
-	public Movie(String title, int runTime, ArrayList<String> scenes) {
+	public Movie(String title, int runTime, ArrayList<String> scenes, Play movieType) {
 		this.title = title;
 		this.runTime = runTime;
 		this.scenes = scenes; 
+		this.movieType = movieType;
 	}
 	
 	/**
@@ -34,7 +36,9 @@ public abstract class Movie {
 		}
 	}
 	
-	public abstract void play();
+	public void play() {
+		movieType.play(scenes);
+	}
 	
 	public void setTitle(String title) {
 		this.title = title;

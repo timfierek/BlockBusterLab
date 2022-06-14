@@ -12,11 +12,9 @@ public class VHS implements Play{
 
 	private int currentTime;
 	private String title;
-	private int runTime;
 	
-	public VHS(String title, int runTime) {
+	public VHS(String title) {
 		this.title = title;
-		this.runTime = runTime;
 		currentTime = 0;
 	}
 	

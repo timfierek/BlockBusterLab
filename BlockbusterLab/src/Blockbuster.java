@@ -16,27 +16,33 @@ public class Blockbuster {
 
 		ArrayList<String> babyDriverScenes = new ArrayList<String>(Arrays.asList("Baby is born", "Baby learns to drive",
 				"Baby gets car", "Baby arrested", "Baby goes to prison"));
-		movies.add(new DVD("Baby Driver", 120, babyDriverScenes));
+		Play babyDriverDVD = new DVD("Baby Driver");
+		movies.add(new Movie("Baby Driver", 120, babyDriverScenes, babyDriverDVD));
 
 		ArrayList<String> starWarsScenes = new ArrayList<String>(
 				Arrays.asList("Lightsaber goes brrr", "Yoda's adventure", "Darth Vader is born", "Wookie"));
-		movies.add(new DVD("Star Wars", 97, starWarsScenes));
+		Play starWarsDVD = new DVD("Star Wars");
+		movies.add(new Movie("Star Wars", 97, starWarsScenes, starWarsDVD));
 
 		ArrayList<String> upScenes = new ArrayList<String>(
 				Arrays.asList("His wife dies", "balloon inflation", "Russ meets old man"));
-		movies.add(new DVD("Up", 145, upScenes));
+		Play upDVD = new DVD("Up");
+		movies.add(new Movie("Up", 145, upScenes, upDVD));
 
 		ArrayList<String> fastAndFuriousScenes = new ArrayList<String>(
 				Arrays.asList("Bad guys shows up", "Big fight scene", "Aggressive driving", "More fighting"));
-		movies.add(new VHS("Fast and Furious 12", 240, fastAndFuriousScenes));
+		Play fastAndFuriousVHS = new VHS("Fast and Furious");
+		movies.add(new Movie("Fast and Furious 12", 240, fastAndFuriousScenes, fastAndFuriousVHS));
 
 		ArrayList<String> shrekScenes = new ArrayList<String>(
 				Arrays.asList("Shrek shows up", "Swamp dries out", "Shrek's wedding", "Epic quest"));
-		movies.add(new VHS("Shrek 5", 62, shrekScenes));
+		Play shrekVHS = new VHS("Shrek");
+		movies.add(new Movie("Shrek 5", 62, shrekScenes, shrekVHS));
 
 		ArrayList<String> spaceJamScenes = new ArrayList<String>(Arrays.asList("Dribbling", "Aliens visit",
 				"More dribbling", "Exploring pluto", "Dribbling againg", "Porky dunks"));
-		movies.add(new VHS("Space Jam 3", 36, spaceJamScenes));
+		Play spaceJamVHS = new VHS("Space Jam");
+		movies.add(new Movie("Space Jam 3", 36, spaceJamScenes, spaceJamVHS));
 
 		// Retrieve movie selection from user
 		System.out.println("Welcome to GC Blockbuster!");
@@ -61,32 +67,7 @@ public class Blockbuster {
 		
 		// If user decides to watch movie, prompt for which scene to watch
 		boolean watch = getYesNo(scnr);
-		while(watch) {
-//			if(movies.get(movieSelection) instanceof DVD) {
-//				System.out.print("Which scene of the DVD " + movies.get(movieSelection).getTitle()
-//						+ " would you like to watch? Select 0 to " 
-//						+ ((movies.get(movieSelection).getScenes().size()) - 1)
-//						+ ": ");
-//			}
-//			else {
-//				System.out.print("Which scene of the VHS " + movies.get(movieSelection).getTitle()
-//						+ " would you like to watch? Select 0 to " 
-//						+ ((movies.get(movieSelection).getScenes().size()) - 1)
-//						+ ": ");
-//			}
-//			
-//			int sceneSelection = -1;
-//			while(sceneSelection == -1) {
-//				try {
-//					sceneSelection = scnr.nextInt();
-//				}catch(Exception e) {
-//					System.out.print("Invalid scene selection, please choose one in the range: ");
-//				}
-//			}
-//			
-//			System.out.println("\nScene " + sceneSelection + ": " 
-//					+ movies.get(movieSelection).getScenes().get(sceneSelection));
-			
+		while(watch) {		
 			movies.get(movieSelection).play();
 			System.out.print("\nWatch another scene? (y/n): ");
 			watch = getYesNo(scnr);

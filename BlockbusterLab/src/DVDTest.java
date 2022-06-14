@@ -9,14 +9,16 @@ class DVDTest {
 	@Test
 	void testConstructor1() {
 		ArrayList<String> scenes = new ArrayList<>();
-		DVD test1 = new DVD("test movie", 4, scenes);
+		Play testDVD = new DVD("test movie");
+		Movie test1 = new Movie("test movie", 4, scenes, testDVD);
 		assertEquals("test movie", test1.getTitle());
 	}
 	
 	@Test
 	void testConstructor2() {
 		ArrayList<String> scenes = new ArrayList<>();
-		DVD test2 = new DVD("test movie", 4, scenes);
+		Play testDVD2 = new DVD("test movie 2");
+		Movie test2 = new Movie("test movie", 4, scenes, testDVD2);
 		assertEquals(4, test2.getRunTime());
 	}
 
